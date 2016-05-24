@@ -63,16 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.buscador', {
-      url: '/buscador',
-      cache: false,
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/buscador.html',
-          controller: 'BuscadorCtrl'
-        }
-      }
-    })
+
     .state('app.subjects', {
       url: '/subjects',
       cache: false,

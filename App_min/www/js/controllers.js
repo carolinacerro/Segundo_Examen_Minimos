@@ -15,30 +15,6 @@ angular.module('starter.controllers', [])
 
 })
 
-  .controller('BuscadorCtrl', function ($scope, AlumnService) {
-
-    $scope.searchKey = "";
-
-    $scope.clearSearch = function () {
-      $scope.searchKey = "";
-      findAllalumnos();
-    }
-
-    $scope.search = function () {
-      AlumnService.findByName($scope.searchKey).then(function (employees) {
-        $scope.alumnos = alumnos;
-      });
-    }
-
-    var findAllEmployees = function() {
-      AlumnService.findAll().then(function (alumnos) {
-        $scope.alumnos = alumnos;
-      });
-    }
-
-    findAllalumnos();
-  })
-
 
 
     .controller('homeCtrl', function($scope, $http, ApiEndpoint, $ionicPopup) {

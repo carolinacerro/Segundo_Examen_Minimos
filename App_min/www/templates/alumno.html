@@ -1,6 +1,7 @@
 <ion-view view-title="Lista de Alumnos">
-  <ion-content>
 
+
+  <ion-content>
     <ion-list show-reorder="reordering">
       <ion-item class="item-remove-animate item-icon-right" ng-repeat="students in students" href="#/app/student/{{students._id}}" ng-click="selectStudent(students._id)">
         <h2>Nombre: {{students.name}}</h2>
