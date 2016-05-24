@@ -1,0 +1,24 @@
+<ion-view view-title="Home">
+  <ion-content>
+
+    <div class="list list-inset">
+      <h4 style="text-align: center">Nuevo alumno</h4>
+      <label class="item item-input">
+        <input type="text" placeholder="Nombre:" ng-model="newStudent.name" required>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Dirección:" ng-model="newStudent.address" required>
+      </label>
+      <label class="item item-input">
+        <input type="number" placeholder="Teléfono 1:" ng-model="newStudent.phones.home" required>
+      </label>
+      <label class="item item-input">
+        <input type="number" placeholder="Teléfono 2: " ng-model="newStudent.phones.work" required>
+      </label>
+      <div class="button-bar">
+        <a class="button" ng-click="registrarAlumno()" ng-disabled="myForm.$invalid || selected">Registrar</a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

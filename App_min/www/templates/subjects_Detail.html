@@ -1,0 +1,24 @@
+<ion-view view-title="Subject Details">
+  <ion-content>
+    <ion-list show-reorder="reordering">
+
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="student in studentsList" href="#/app/student/{{student._id}}" ng-click="selectStudent(student._id)">
+        <h2>{{student.name}}</h2>
+
+      </ion-item>
+    </ion-list>
+
+    <br><br><br>
+
+    <div class="list list-inset">
+      <h4 style="text-align: center">Añadir Alumno</h4>
+      <label class="item item-input">
+        <input type="text" placeholder="Nombre" ng-model="updatedSubject.student" required>
+      </label>
+      <div class="button-bar">
+        <a class="button" ng-click="addStudent()" ng-disabled="myForm.$invalid || selected">Añadir</a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
